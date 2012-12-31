@@ -1,0 +1,109 @@
+body { margin: 20px; font: 14px "Lucida Grande", Lucida, Verdana, sans-serif;}
+h1 {
+	font-size: 24px;
+	padding-bottom: 10px;
+	border-bottom: 1px solid #999;
+}
+p {
+	margin: 10px 0px;
+}
+li {
+	margin-left: 30px;
+	margin-bottom: 5px;
+	list-style-type: disc;
+}
+
+#fnc_cont {
+	position: relative;
+	width: 500px;
+	border: 1px solid #666;
+	font: 13px "Lucida Grande", Lucida, Verdana, sans-serif;
+	-webkit-border-radius: 4px;
+	-moz-border-radius: 4px;
+}
+
+#fnc_cont .tags {
+	padding: 3px;
+}
+
+#fnc_cont input {
+	font-size: 13px;
+}
+
+#fnc_cont .tag {
+	display: block;
+	margin: 2px;
+	padding: 2px;
+	border: 1px solid #006f34;
+	background-color: #bddaca;
+	-webkit-border-radius: 4px;
+	-moz-border-radius: 4px;
+	
+}
+
+#fnc_cont .tag .label {
+	margin-left: 1px;
+}
+
+#fnc_cont .close {
+	position: relative;
+	top: 5px;
+	margin: 0px 4px;
+	float: right;
+	height: 7px;
+	width: 7px;
+	background-image: url(./close.gif);
+	background-position: 0px 0px;
+	cursor: pointer;
+}
+
+#fnc_cont .close:hover {
+	background-position: 0px 7px;
+}
+
+#fnc_cont .label {
+	float: left;
+}
+
+#fnc_cont .tag.selected {
+	background-color: #a0c4b0;
+	border: 1px solid red;
+}
+
+#fnc_cont .tag, #fnc_cont .entry {
+	white-space: nowrap;
+	float: left;
+}
+
+#fnc_cont .entry {
+	position: relative;
+	top: 5px;
+	margin-bottom: 10px;
+	margin-left: 5px;
+}
+
+#fnc_cont .entry .new_tag {
+	background-color: transparent;
+	outline: none;
+	border: none;
+}
+
+#fnc_cont .choices {
+	position: absolute;
+	margin: -1px;
+	border: 1px solid #999;
+	border-top: none;
+	border-bottom: none;
+	background-color: #eee;
+	width: 100%;
+	z-order: -999;
+}
+
+#fnc_cont .choices li {
+	border-bottom: 1px solid #999;
+	padding: 4px;
+}
+
+#fnc_cont .clear {
+	clear: both;
+}

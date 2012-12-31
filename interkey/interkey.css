@@ -1,0 +1,23 @@
+body { margin: 20px; font: 14px "Lucida Grande", Lucida, Verdana, sans-serif;}
+h1 {
+	font-size: 24px;
+	padding-bottom: 10px;
+	border-bottom: 1px solid #999;
+}
+p {
+	margin: 10px 0px;
+}
+li {
+	margin-left: 30px;
+	margin-bottom: 5px;
+	list-style-type: disc;
+}
+
+#interkey {
+	height: 250px;
+	width: 500px;
+}
+
+#done{
+	padding: 8px;
+}
