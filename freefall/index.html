@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Freefall detection test</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+</head>
+<body>
+  <div>
+    <strong>accel: x, y, z</strong>
+  </div>
+  <div id="log-container"></div>
+  <script>
+    var logContainer = document.getElementById("log-container"),
+        i = 0;
+    if (window.ondevicemotion === undefined) {
+      logContainer.innerHTML = "Your device does not seem to support ondevicemotion :(";
+    }
+    window.ondevicemotion = function(event) {
+      var a = event.accelerationIncludingGravity,
+          logLine = document.createElement("div");
+      if (Math.abs(a.x) < 1 && Math.abs(a.y) < 1 && Math.abs(a.z) < 1) {
+        // freefall(ish)!
+        document.body.style.backgroundColor = "red";
+      } else {
+        document.body.style.backgroundColor = "white";
+      }
+      logLine.innerText = a.x.toFixed(3) + ", " + a.y.toFixed(3) + ", " + a.z.toFixed(3);
+      logContainer.insertBefore(logLine, logContainer.firstChild);
+      i++;
+      if (i > 25) {
+        logContainer.removeChild(logContainer.lastChild);
+      }
+    };
+  </script>
+</body>
+</html>
